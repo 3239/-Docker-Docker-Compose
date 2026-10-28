@@ -38,3 +38,8 @@ https://hub.docker.com/r/krvfilimonova/custom-nginx/tags
 <img width="944" height="615" alt="image" src="https://github.com/user-attachments/assets/8103b460-ac73-47d0-a893-e37154294856" />
 <img width="1533" height="301" alt="image" src="https://github.com/user-attachments/assets/1f92f489-3c04-44d4-b2a1-e76f4ade7dd9" />
 Docker Compose обнаружил несколько файлов с поддерживаемыми именами в директории. Т. к. compose.yaml был удалён, теперь используется docker-compose.yaml (следующий по приоритету).  
+
+ИСПРАВЛЕНИЯ:
+Предупреждение об orphan-контейнере появляется, когда в проекте остаётся запущенный контейнер, который больше не описан в файлах docker-compose.yaml или compose.yaml. В моём случае: после удаления compose.yaml, контейнер portainer остался работать, но исчез из конфигурации проекта. Docker Compose обнаружил этот "осиротевший" контейнер и предложил использовать флаг --remove-orphans для его удаления.
+
+
