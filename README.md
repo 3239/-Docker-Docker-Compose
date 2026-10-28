@@ -42,5 +42,7 @@ Docker Compose обнаружил несколько файлов с подде�
 
 ИСПРАВЛЕНИЯ:
 Предупреждение об orphan-контейнере появляется, когда в проекте остаётся запущенный контейнер, который больше не описан в файлах docker-compose.yaml или compose.yaml. В моём случае: после удаления compose.yaml, контейнер portainer остался работать, но исчез из конфигурации проекта. Docker Compose обнаружил этот "осиротевший" контейнер и предложил использовать флаг --remove-orphans для его удаления.
-Правильная команда для остановки проекта sudo docker compose down --remove-orphans
+
+<img width="1532" height="336" alt="image" src="https://github.com/user-attachments/assets/cbaec65c-5ff3-4a1e-b91c-ab60fbd8d25d" />
+
 
